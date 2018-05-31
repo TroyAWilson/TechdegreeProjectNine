@@ -6,6 +6,7 @@
   <title>Web Dashboard | Project 9</title>
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 </head>
 <body>
   <header class ="main-header">
@@ -33,16 +34,136 @@
       </form>
     </div>
     <div class ="graphs-container">
-      <div class ="graph1">
-
+      <div class ="graph1 " style ="height:94vh; width:94vw">
+        <canvas id="myChart1" ></canvas>
+<script>
+var ctx = document.getElementById("myChart1").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26","27-3","4-10","11-17","18-24","25-31"],
+        datasets: [{
+            label: 'Traffic',
+            data: [500, 1500, 1250, 1750, 2300, 1750,2000,1500,2000,3000,2000,3000],
+            backgroundColor: [
+                'rgba(116, 119, 191, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(116, 119, 191, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            pointBackgroundColor: [
+              'rgba(255,255,255,1)',
+              'rgba(255,255,255,1)',
+              'rgba(255,255,255,1)',
+              'rgba(255,255,255,1)',
+              'rgba(255,255,255,1)',
+              'rgba(255,255,255,1)',
+              'rgba(255,255,255,1)',
+              'rgba(255,255,255,1)',
+              'rgba(255,255,255,1)',
+              'rgba(255,255,255,1)',
+              'rgba(255,255,255,1)',
+            ],
+            pointRadius:[
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+  });
+</script>
       </div>
 
-      <div class ="graph2">
+      <div class ="graph2" style ="height:50vh; width:45vw">
+        <canvas id="myChart2" ></canvas>
+        <script>
+        var ctx = document.getElementById("myChart2").getContext('2d');
+        var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+        labels: ["S","M", "T", "W", "TH", "F", "S",],
+        datasets: [{
+            label: 'Traffic',
+            data: [50, 100, 200, 125, 230, 210,100],
+            backgroundColor: [
+                'rgba(77, 76, 114, 1)',
+                'rgba(77, 76, 114, 1)',
+                'rgba(77, 76, 114, 1)',
+                'rgba(77, 76, 114, 1)',
+                'rgba(77, 76, 114, 1)',
+                'rgba(77, 76, 114, 1)',
+                'rgba(77, 76, 114, 1)',
+            ],
 
+            borderWidth: 1
+        }]
+        },
+        options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+        }
+        });
+        </script>
       </div>
 
-      <div class ="graph3">
-
+      <div class ="graph" style ="height:50vh; width:49vw">
+        <canvas id="myChart" ></canvas>
+        <script>
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+        labels: ["Phones", "Tablets", "Desktops"],
+        datasets: [{
+            label: 'Traffic',
+            data: [5000, 1500, 13500],
+            backgroundColor: [
+                'rgba(133, 219, 128, 1)',
+                'rgba(116, 119, 191, 1)',
+                'rgba(77, 76, 114, 1)'
+            ],
+            borderColor: [
+              'rgba(116, 119, 191, 1)',
+              'rgba(116, 119, 191, 1)',
+              'rgba(116, 119, 191, 1)'
+            ],
+            borderWidth: 1
+        }]
+        },
+        });
+        </script>
       </div>
 
     </div>
@@ -77,7 +198,7 @@
       <div class="new-members-container activity-container">
         <span>New members</span>
         <div class="new-member">
-          <img src ="icons\icon-twitter.svg" width ="40px">
+          <img class ="new-member-image" src ="85.jpg" width ="40px">
           <div>
             <p>Victoria Chambers</p>
             <a href ="#"><p>Victoriachambers80@expample.com</p></a>
@@ -86,7 +207,7 @@
         </div>
 
         <div class="new-member">
-          <img src ="icons\icon-twitter.svg" width ="40px">
+          <img class ="new-member-image" src ="85.jpg" width ="40px">
           <div>
             <p>Victoria Chambers</p>
             <a href ="#"><p>Victoriachambers80@expample.com</p></a>
@@ -95,7 +216,7 @@
         </div>
 
         <div class="new-member">
-          <img src ="icons\icon-twitter.svg" width ="40px">
+          <img class ="new-member-image" src ="85.jpg" width ="40px">
           <div>
             <p>Victoria Chambers</p>
             <a href ="#"><p>Victoriachambers80@expample.com</p></a>
@@ -104,7 +225,7 @@
         </div>
 
         <div class="new-member">
-          <img src ="icons\icon-twitter.svg" width ="40px">
+          <img class ="new-member-image" src ="85.jpg" width ="40px">
           <div>
             <p>Victoria Chambers</p>
             <a href ="#"><p>Victoriachambers80@expample.com</p></a>
@@ -116,7 +237,7 @@
       <div class="recent-activity-container activity-container">
         <span>Recent activity</span>
         <div class="activity-div">
-          <img src ="icons\icon-twitter.svg" width ="40px">
+          <img class ="recent-activity-image" src ="85.jpg" width ="40px">
           <div>
             <p>Victoria Chambers commented on YourApp's SEO tips</p>
             <p>4 hours ago</p>
@@ -125,7 +246,7 @@
         </div>
 
         <div class="activity-div">
-          <img src ="icons\icon-twitter.svg" width ="40px">
+          <img class ="recent-activity-image" src ="85.jpg" width ="40px">
           <div>
             <p>Victoria Chambers commented on YourApp's SEO tips</p>
             <p>4 hours ago</p>
@@ -134,7 +255,7 @@
         </div>
 
         <div class="activity-div">
-          <img src ="icons\icon-twitter.svg" width ="40px">
+          <img class ="recent-activity-image" src ="85.jpg" width ="40px">
           <div>
             <p>Victoria Chambers commented on YourApp's SEO tips</p>
             <p>4 hours ago</p>
@@ -142,7 +263,7 @@
           <p><i class="arrow right"></i></p>
         </div>
         <div class="activity-div">
-          <img src ="icons\icon-twitter.svg" width ="40px">
+          <img class ="recent-activity-image" src ="85.jpg" width ="40px">
           <div>
             <p>Victoria Chambers commented on YourApp's SEO tips</p>
             <p>4 hours ago</p>
@@ -165,11 +286,18 @@
         <span>Settings</span>
         <div class ="settings-checkbox-conatiner">
           <span>Send Email Notifications</span>
-          <input type="checkbox">
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
         </div>
         <div class ="settings-checkbox-conatiner">
           <span>Set Profile As Public</span>
-          <input type="checkbox">
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+
         </div>
         <select>
           <option value="" disabled selected>Select Time Zone</option>
@@ -189,7 +317,7 @@
     </div>
   </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+
   <script type="text/javascript" src="scripts/script.js"></script>
 </body>
 </html>
