@@ -10,12 +10,15 @@
 </head>
 <body>
   <header class ="main-header">
-    <span><strong>Your</strong> App</span>
+    <span class ="title"><strong>Your</strong> App</span>
     <div class ="inner-main-header">
-    <img class ="header-bell" src="icons\icon-bell.svg" alt="" width ="20px" height ="20px">
+      <div>
+        <p class ="circle"></p>
+        <img class ="header-bell" src="icons\icon-bell.svg" alt="" width ="20px" height ="20px">
+    </div>
     <div class="profile-head">
-      <img src="icons\icon-members.svg" alt="" width ="20px"> <!-- Image placeholding for profile picture -->
-      <span>John Smith</span>
+      <img src="images/25.jpg" alt="" width ="30px"> <!-- Image placeholding for profile picture -->
+      <p>John Smith</p>
     </div>
     </div>
   </header>
@@ -34,7 +37,7 @@
       </form>
     </div>
     <div class ="graphs-container">
-      <div class ="graph1 " style ="height:94vh; width:94vw">
+      <div class ="graph1 " style ="height:99vh; width:94vw">
         <canvas id="myChart1" ></canvas>
 <script>
 var ctx = document.getElementById("myChart1").getContext('2d');
@@ -198,75 +201,75 @@ var myChart = new Chart(ctx, {
       <div class="new-members-container activity-container">
         <span>New members</span>
         <div class="new-member">
-          <img class ="new-member-image" src ="85.jpg" width ="40px">
+          <img class ="new-member-image" src ="images/85.jpg" width ="40px">
           <div>
             <p>Victoria Chambers</p>
             <a href ="#"><p>Victoriachambers80@expample.com</p></a>
           </div>
-          <span>10/15/15</span>
+          <span>12/25/17</span>
         </div>
 
         <div class="new-member">
-          <img class ="new-member-image" src ="85.jpg" width ="40px">
+          <img class ="new-member-image" src ="images/0.jpg" width ="40px">
           <div>
-            <p>Victoria Chambers</p>
-            <a href ="#"><p>Victoriachambers80@expample.com</p></a>
+            <p>Mario Russell</p>
+            <a href ="#"><p>MarioRussell0@expample.com</p></a>
           </div>
-          <span>10/15/15</span>
+          <span>9/11/11</span>
         </div>
 
         <div class="new-member">
-          <img class ="new-member-image" src ="85.jpg" width ="40px">
+          <img class ="new-member-image" src ="images/1.jpg" width ="40px">
           <div>
-            <p>Victoria Chambers</p>
+            <p>David Thomas</p>
             <a href ="#"><p>Victoriachambers80@expample.com</p></a>
           </div>
-          <span>10/15/15</span>
+          <span>5/12/15</span>
         </div>
 
         <div class="new-member">
-          <img class ="new-member-image" src ="85.jpg" width ="40px">
+          <img class ="new-member-image" src ="images/6.jpg" width ="40px">
           <div>
-            <p>Victoria Chambers</p>
-            <a href ="#"><p>Victoriachambers80@expample.com</p></a>
+            <p>Maxine Lambert</p>
+            <a href ="#"><p>Maxinelambert6@expample.com</p></a>
           </div>
-          <span>10/15/15</span>
+          <span>1/5/16</span>
         </div>
       </div>
 
       <div class="recent-activity-container activity-container">
         <span>Recent activity</span>
         <div class="activity-div">
-          <img class ="recent-activity-image" src ="85.jpg" width ="40px">
+          <img class ="recent-activity-image" src ="images/9.jpg" width ="40px">
           <div>
-            <p>Victoria Chambers commented on YourApp's SEO tips</p>
-            <p>4 hours ago</p>
+            <p>Ted Brewer commented on YourApp's SEO tips</p>
+            <p>Just now</p>
           </div>
           <p><i class="arrow right"></i></p>
         </div>
 
         <div class="activity-div">
-          <img class ="recent-activity-image" src ="85.jpg" width ="40px">
+          <img class ="recent-activity-image" src ="images/17.jpg" width ="40px">
           <div>
-            <p>Victoria Chambers commented on YourApp's SEO tips</p>
-            <p>4 hours ago</p>
+            <p>Nevaeh Hopkins commented on YourApp's SEO tips</p>
+            <p>A few moments ago</p>
           </div>
           <p><i class="arrow right"></i></p>
         </div>
 
         <div class="activity-div">
-          <img class ="recent-activity-image" src ="85.jpg" width ="40px">
+          <img class ="recent-activity-image" src ="images/21.jpg" width ="40px">
           <div>
-            <p>Victoria Chambers commented on YourApp's SEO tips</p>
-            <p>4 hours ago</p>
+            <p>Steve Fox commented on YourApp's SEO tips</p>
+            <p>2 hours ago</p>
           </div>
           <p><i class="arrow right"></i></p>
         </div>
         <div class="activity-div">
-          <img class ="recent-activity-image" src ="85.jpg" width ="40px">
+          <img class ="recent-activity-image" src ="images/47.jpg" width ="40px">
           <div>
-            <p>Victoria Chambers commented on YourApp's SEO tips</p>
-            <p>4 hours ago</p>
+            <p>Shelly Ramirez commented on YourApp's SEO tips</p>
+            <p>12 hours ago</p>
           </div>
           <p><i class="arrow right"></i></p>
         </div>
@@ -285,14 +288,14 @@ var myChart = new Chart(ctx, {
       <div class="settings-container activity-container">
         <span>Settings</span>
         <div class ="settings-checkbox-conatiner">
-          <span>Send Email Notifications</span>
+          <span class="send-email-span">Send Email Notifications</span>
           <label class="switch">
             <input type="checkbox">
             <span class="slider round"></span>
           </label>
         </div>
         <div class ="settings-checkbox-conatiner">
-          <span>Set Profile As Public</span>
+          <span class="public-profile-span">Set Profile As Public</span>
           <label class="switch">
             <input type="checkbox">
             <span class="slider round"></span>

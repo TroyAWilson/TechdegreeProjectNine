@@ -31,15 +31,42 @@ p{
   padding: 15px;
   justify-content: space-between;
 }
+.title {
+  color: white;
+  font-size: 1.3em;
+}
 .inner-main-header{
   display: flex;
 }
+.circle{
+  position: relative;
+  z-index: 100;
+  left: 30px;
+  top: 7px;
+  background-color: #85DB80;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  margin: 0;
+}
 .header-bell{
-  margin: 0 15px;
+  margin: 5px 15px;
+  transition: transform .2s ease-in;
+}
+.header-bell:hover{
+  cursor: pointer;
 }
 .profile-head{
   border-left: 1px solid black;
   padding-left: 15px;
+}
+.profile-head img {
+  border-radius: 50%;
+}
+.profile-head p{
+  display: inline-block;
+  margin: 0;
+  color: white;
 }
 .sidebar{
   display: flex;
@@ -50,6 +77,9 @@ p{
 }
 .side-icon{
   margin: 15px 0;
+}
+.side-icon:hover{
+  cursor: pointer;
 }
 .side-icon-active{
   border-left: 1px solid #85DB80;
@@ -131,6 +161,7 @@ p{
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .new-members-container span,
 .recent-activity-container span{
@@ -167,7 +198,7 @@ p{
   flex-direction: column;
 }
 .message-user-container textarea{
-  height: 85px;
+  height: 105px;
   margin: 10px 0;
 }
 .message-user-container input{
@@ -190,13 +221,11 @@ p{
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
+  padding: 15px 25px;
 }
 .settings-container button{
   width: 50%;
   margin: 5px;
-}
-.settings-container span{
-  padding: 15px 25px;
 }
 .settings-container select{
   padding: 10px;
@@ -204,6 +233,13 @@ p{
 }
 .settings-checkbox-conatiner{
   padding: 10px 0;
+}
+.public-profile-span{
+  padding: 15px 25px;
+  padding-right: 62px;
+}
+.send-email-span{
+  padding:15px 25px;
 }
 .cancel-button{
   background-color: grey;
@@ -237,7 +273,7 @@ i:hover{
 
 
 
-/* Toggle switch test */
+/* Toggle switch */
 
 
 
@@ -278,11 +314,11 @@ i:hover{
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #7477BF;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #7477BF;
 }
 
 input:checked + .slider:before {
