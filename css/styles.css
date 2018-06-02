@@ -19,7 +19,8 @@ form {
 
 a{
   text-decoration: none;
-}
+color: black
+  }
 
 p{
   font-size: .8em;
@@ -56,6 +57,32 @@ p{
 .header-bell:hover{
   cursor: pointer;
 }
+
+.dropDown{
+  display: none;
+  position: absolute;
+  background-color: #7477BF;
+  top:65px;
+  right:135px;
+  z-index: 1;
+  flex-direction: column;
+  padding: 20px 10px;
+  box-shadow: 0 3px 1px 1px black;
+}
+.dropDown div{
+  margin: 5px;
+  border-bottom: 1px dashed whitesmoke
+}
+.dropDown p{
+  background-color: whitesmoke;
+  padding: 2px;
+  border-radius: 3px;
+}
+.show{
+  display: flex;
+}
+
+
 .profile-head{
   border-left: 1px solid black;
   padding-left: 15px;
@@ -73,16 +100,20 @@ p{
   flex-direction: column;
   background-color:#4D4C72;
   height: 2175px;
-  padding: 15px;
+  width: 15%;
+  /* padding: 15px; */
 }
 .side-icon{
-  margin: 15px 0;
+  padding: 15px 0;
+  padding-left: 15px;
+
 }
 .side-icon:hover{
   cursor: pointer;
 }
 .side-icon-active{
-  border-left: 1px solid #85DB80;
+  border-left: 2px solid #85DB80;
+  border-radius: 5px;
 }
 .dash-head{
   display: flex;
