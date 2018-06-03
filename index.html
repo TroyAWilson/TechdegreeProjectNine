@@ -56,6 +56,10 @@
         <input class ="search-bar" type="text" placeholder="Search">
       </form>
     </div>
+    <div class="notification-bar-top">
+      <span><strong>Alert</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+        <span class ="notification-x">X</span>
+    </div>
     <div class ="graphs-container">
       <div class ="graph1 " style ="height:99vh; width:94vw">
         <canvas id="myChart1" ></canvas>
@@ -298,10 +302,11 @@ var myChart = new Chart(ctx, {
       <div class="message-user-container activity-container">
         <span>Message user</span>
         <form>
-          <input type="text" placeholder="Search for user">
-          <textarea>
+          <input class ="message-user-input" type="text" placeholder="Search for user" required>
+          <textarea class ="message-user-text" required>
           </textarea>
-          <button class ="message-user-button">Send</button>
+          <p class ="sent-message">Message sent!</p>
+          <button type ="button" class ="message-user-button">Send</button>
         </form>
       </div>
 
