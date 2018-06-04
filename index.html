@@ -10,7 +10,7 @@
 </head>
 <body>
   <header class ="main-header">
-    <span class ="title"><strong>Your</strong> App</span>
+    <span class ="title"><strong>Your</strong>App<small>&trade;</small></span>
     <div class ="inner-main-header">
       <div>
         <p class ="circle"></p>
@@ -32,8 +32,6 @@
             <img src ="icons\icon-bell.svg" width ="15px" height ="15px">
             <a href="#"><p>Notification #4</p></a>
           </div>
-
-
         </div>
     </div>
     <div class="profile-head">
@@ -57,11 +55,11 @@
       </form>
     </div>
     <div class="notification-bar-top">
-      <span><strong>Alert</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
+      <span><strong>Alert!</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
         <span class ="notification-x">X</span>
     </div>
     <div class ="graphs-container">
-      <div class ="graph1 " style ="height:99vh; width:94vw">
+      <div class ="graph1 ">
         <canvas id="myChart1" ></canvas>
 <script>
 var ctx = document.getElementById("myChart1").getContext('2d');
@@ -128,7 +126,7 @@ var myChart = new Chart(ctx, {
 </script>
       </div>
 
-      <div class ="graph2" style ="height:50vh; width:45vw">
+      <div class ="graph2" >
         <canvas id="myChart2" ></canvas>
         <script>
         var ctx = document.getElementById("myChart2").getContext('2d');
@@ -165,7 +163,7 @@ var myChart = new Chart(ctx, {
         </script>
       </div>
 
-      <div class ="graph" style ="height:50vh; width:49vw">
+      <div class ="graph3">
         <canvas id="myChart" ></canvas>
         <script>
         var ctx = document.getElementById("myChart").getContext('2d');
@@ -302,9 +300,10 @@ var myChart = new Chart(ctx, {
       <div class="message-user-container activity-container">
         <span>Message user</span>
         <form>
-          <input class ="message-user-input" type="text" placeholder="Search for user" required>
-          <textarea class ="message-user-text" required>
+          <input class ="message-user-input" type="text" placeholder="Search for user" >
+          <textarea class ="message-user-text">
           </textarea>
+          <p class ="error-message">Error, make sure your fields are filled out!</p>
           <p class ="sent-message">Message sent!</p>
           <button type ="button" class ="message-user-button">Send</button>
         </form>

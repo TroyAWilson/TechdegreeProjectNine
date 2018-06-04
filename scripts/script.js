@@ -7,6 +7,7 @@ const messageUserButton =document.getElementsByClassName('message-user-button');
 const messageUserText = document.getElementsByClassName('message-user-text');
 const messageUserInput = document.getElementsByClassName('message-user-input');
 const messageSent =document.getElementsByClassName('sent-message');
+const errorMessage =document.getElementsByClassName('error-message');
 
 
 bell.addEventListener("click", ()=>{
@@ -20,10 +21,22 @@ xButton[0].addEventListener('click', ()=>{
 });
 
 messageUserButton[0].addEventListener('click', ()=>{
-  if (false)
+  if (messageUserInput[0].value == "" || messageUserText[0].value == "")
   {
+  errorMessage[0].style.display ="inline";
+  messageSent[0].style.display ="none";
+    if(messageUserText[0].value == "          " || messageUserText[0].value ==""){
+  messageUserText[0].classList.add('error-border');
+    }
+    if(messageUserInput[0].value == ""){
+  messageUserInput[0].classList.add('error-border');
+    }
+}else{
   messageSent[0].style.display ="inline";
-  }
+  errorMessage[0].style.display ="none";
+  messageUserText[0].classList.remove('error-border');
+  messageUserInput[0].classList.remove('error-border');
+}
   messageUserInput[0].value ="";
   messageUserText[0].value ="";
 });
