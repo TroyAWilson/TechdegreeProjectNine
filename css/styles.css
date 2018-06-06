@@ -67,7 +67,7 @@ p{
   z-index: 1;
   flex-direction: column;
   padding: 20px 10px;
-  box-shadow: 0 3px 1px 1px black;
+  box-shadow: 0 3px 1px 1px rgba(0, 0, 0, 0.5);
 }
 .dropDown div{
   margin: 5px;
@@ -423,6 +423,9 @@ input:checked + .slider:before {
     flex-direction: column;
     align-items: center;
   }
+  .main-header span{
+    padding-bottom: 10px;
+  }
   .profile-head{
     border: none;
     padding: 0;
@@ -435,27 +438,31 @@ input:checked + .slider:before {
     align-items: flex-start;
   }
   .dropDown{
-    position: relative;
-    box-shadow: none;
-    top:0;
-    right:75px;
+    /* position: relative; */
+    /* box-shadow: none; */
+    top:97px;
+    right:35px;
   }
   .dropDown div{
     margin: 0;
     border:none;
   }
   .sidebar{
-    display: none;
+    flex-direction: row;
+    height:auto;
+    width: auto;
+    justify-content: space-between;
+    /* display: none; */
   }
   .graph1{
-    height: 30vh;
+    height: 25vh;
   }
   .graph2{
-    height: 30vh;
+    height: 25vh;
     width: 100vw;
   }
   .graph3{
-    height: 30vh;
+    height: 25vh;
     width: 100vw;
   }
   .social-stats{
@@ -464,6 +471,9 @@ input:checked + .slider:before {
   }
   .social-container{
     width: 100%;
+  }
+  .social-image{
+
   }
   .activity-container{
     width: 100%;
@@ -480,8 +490,51 @@ input:checked + .slider:before {
   }
 
 }
-@media (min-width:768px){
+@media (max-width:768px){
+  .main-container{
+    flex-direction: column;
+  }
+  .main-header span{
+    padding-bottom: 0px;
+  }
+  .sidebar{
+    flex-direction: row;
+    height:auto;
+    width: auto;
+    justify-content: space-between;
+    /* display: none; */
+  }
+  .side-icon{
+    width: 50px;
+    height: 50px;
+    padding-left: 0;
+    margin: 5px;
+  }
+  .side-icon-active{
+    border:none;
+    background-color: #7477BF;
+    border-radius: 50%;
 
+  }
+  .graph1{
+    height: 45vh;
+  }
+  .graph2{
+    height: 45vh;
+    width: 100vw;
+  }
+  .graph3{
+    height: 40vh;
+    width: 100vw;
+  }
+  .social-stats{
+    padding:0;
+    margin:0;
+  }
+  .activity-container{
+    width: 100%;
+    overflow: auto;
+  }
 }
 @media (min-width:1024px){
 
