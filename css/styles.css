@@ -104,19 +104,20 @@ p{
   background-color:#4D4C72;
   height: 2250px;
   width: 15%;
-  /* padding: 15px; */
 }
 .side-icon{
   padding: 15px 0;
-  padding-left: 15px;
 
 }
 .side-icon:hover{
   cursor: pointer;
 }
-.side-icon-active{
-  border-left: 2px solid #85DB80;
-  border-radius: 5px;
+.side-div{
+  text-align: center;
+}
+.active-tab{
+  border-left: 3px solid #85DB80;
+  border-radius: 3px;
 }
 .dash-head{
   display: flex;
@@ -511,11 +512,15 @@ input:checked + .slider:before {
     margin: 5px;
   }
   .side-icon-active{
-    border:none;
+
+    border:2px solid #85DB80;
     background-color: #7477BF;
     border-radius: 50%;
-
   }
+  .active-tab{
+    border: none;
+  }
+
   .graph1{
     height: 45vh;
   }
